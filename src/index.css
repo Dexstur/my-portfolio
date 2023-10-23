@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -ms-overflow-style: none;
+  font-family: "Inter", sans-serif;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --base-color: #4357ad;
+  --sec-color: #84bcda;
+  --print-color: #0d0106;
+  --tet-color: #fef6c9;
+}
+
+.spinner {
+  animation: spin 2s linear infinite;
+}
+
+.bg-base {
+  background-color: var(--base-color, #5e2bff);
+  color: #fff;
+}
+
+.bg-sec {
+  background-color: var(--sec-color, #84bcda);
+  color: var(--print-color, #0d0106);
+}
+
+.bg-tet {
+  background-color: var(--tet-color, #fef6c9);
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
