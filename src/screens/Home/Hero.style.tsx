@@ -57,7 +57,6 @@ export const ProfileContainer = styled.div`
 export const ProfileImg = styled.img`
   width: 80px;
   height: 80px;
-  border: 1px solid #000;
   border-radius: 50%;
 
   @media (min-width: 768px) {

@@ -8,6 +8,7 @@ import {
   Details,
 } from "./Hero.style";
 import bgImage from "/comp-2.jpeg";
+import profileImg from "/profile.png";
 
 function Hero() {
   return (
@@ -15,7 +16,7 @@ function Hero() {
       <Container style={{ backgroundColor: "#fff" }}>
         <HeroImg bg={bgImage} />
         <ProfileContainer>
-          <ProfileImg src={bgImage} alt="reload img" />
+          <ProfileImg src={profileImg} alt="reload img" />
         </ProfileContainer>
         <HeroBody>
           <Details>
