@@ -61,10 +61,17 @@ const LinkWrap = styled.span`
 
 interface HeaderProps {
   mobileMenu: boolean;
+  activeNav?: string;
   seeMobileMenu: () => void;
 }
 
-function Header({ mobileMenu = false, seeMobileMenu }: HeaderProps) {
+function Header({
+  mobileMenu = false,
+  seeMobileMenu,
+  activeNav = "home",
+}: HeaderProps) {
+  const HomeActive = activeNav === "home" ? "underline" : "none";
+  const CredentialActive = activeNav === "credential" ? "underline" : "none";
   return (
     <Nav className="bg-base">
       <NavToggle onClick={seeMobileMenu} className="bg-sec">
@@ -72,10 +79,12 @@ function Header({ mobileMenu = false, seeMobileMenu }: HeaderProps) {
       </NavToggle>
       <NavMenu show={Boolean(mobileMenu)} className="bg-base">
         <HLink to="/">
-          <LinkWrap>Home</LinkWrap>
+          <LinkWrap style={{ textDecoration: HomeActive }}>Home</LinkWrap>
         </HLink>
-        <HLink to="/">
-          <LinkWrap>Profile</LinkWrap>
+        <HLink to="/credentials">
+          <LinkWrap style={{ textDecoration: CredentialActive }}>
+            Credentials
+          </LinkWrap>
         </HLink>
       </NavMenu>
     </Nav>

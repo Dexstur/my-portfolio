@@ -26,9 +26,10 @@ const Wrap = styled.div`
 
 interface LayoutProps {
   children: ReactNode;
+  activeNav?: string;
 }
 
-function Layout({ children }: LayoutProps) {
+function Layout({ children, activeNav = "home" }: LayoutProps) {
   const [mobileMenu, seeMobileMenu] = useState(false);
   const toggleMobileMenu = () => {
     seeMobileMenu((prev) => !prev);
@@ -38,7 +39,11 @@ function Layout({ children }: LayoutProps) {
   };
   return (
     <Wrap className="bg-sec">
-      <Header mobileMenu={mobileMenu} seeMobileMenu={toggleMobileMenu} />
+      <Header
+        mobileMenu={mobileMenu}
+        seeMobileMenu={toggleMobileMenu}
+        activeNav={activeNav}
+      />
       <div
         style={{ minHeight: "100vh" }}
         onClick={toggleOff}
