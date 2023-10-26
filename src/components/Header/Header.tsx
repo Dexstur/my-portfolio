@@ -72,6 +72,7 @@ function Header({
 }: HeaderProps) {
   const HomeActive = activeNav === "home" ? "underline" : "none";
   const CredentialActive = activeNav === "credential" ? "underline" : "none";
+  const ProjectActive = activeNav === "projects" ? "underline" : "none";
   return (
     <Nav className="bg-base">
       <NavToggle onClick={seeMobileMenu} className="bg-sec">
@@ -84,6 +85,11 @@ function Header({
         <HLink to="/credentials">
           <LinkWrap style={{ textDecoration: CredentialActive }}>
             Credentials
+          </LinkWrap>
+        </HLink>
+        <HLink to="/projects">
+          <LinkWrap style={{ textDecoration: ProjectActive }}>
+            Projects
           </LinkWrap>
         </HLink>
       </NavMenu>
