@@ -121,7 +121,7 @@ function Skills() {
   useEffect(() => {
     const handleResize = () => {
       // Check the screen width
-      if (window.innerWidth > 768) {
+      if (window.innerWidth >= 768) {
         setMaxItems(technologies.length);
         seeTechToggle(false);
       } else {
@@ -152,7 +152,7 @@ function Skills() {
   return (
     <Container>
       <Wrapper>
-        <Box style={{ backgroundColor: "#fff" }}>
+        <Box style={{ backgroundColor: "#fffefe" }}>
           <Mid>
             <h3 style={{ fontSize: "1rem" }}>Technologies</h3>
             <NonBulletList>
@@ -175,7 +175,7 @@ function Skills() {
             ) : null}
           </Mid>
         </Box>
-        <Box className="bg-tet">
+        <Box className="bg-alt">
           <Skill>
             <h3 style={{ fontSize: "1rem", textAlign: "center" }}>Skills</h3>
             {mySkills.map((skill, index) => (

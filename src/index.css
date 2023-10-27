@@ -29,6 +29,7 @@
   --sec-color: #84bcda;
   --print-color: #0d0106;
   --tet-color: #fef6c9;
+  --alt-color: #c2f9bb;
 }
 
 .spinner {
@@ -47,6 +48,10 @@
 
 .bg-tet {
   background-color: var(--tet-color, #fef6c9);
+}
+
+.bg-alt {
+  background-color: var(--alt-color, #8640bc);
 }
 
 @keyframes spinner {

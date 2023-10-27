@@ -15,7 +15,7 @@ function Contact() {
   return (
     <Container>
       <Wrapper>
-        <Box style={{ backgroundColor: "#fff" }}>
+        <Box style={{ backgroundColor: "#fffefe" }}>
           <SubTitle>Contact Me</SubTitle>
           <div style={{ width: "320px", margin: "0 auto", padding: "12px" }}>
             <Profile href="mailto:chuks89@live.com">
@@ -42,7 +42,7 @@ function Contact() {
             </Profile>
           </div>
         </Box>
-        <Box className="bg-tet">
+        <Box className="bg-alt">
           <SubTitle>Credentials</SubTitle>
           <div style={{ padding: "12px" }}>
             <div>

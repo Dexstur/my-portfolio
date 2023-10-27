@@ -26,7 +26,7 @@ function Qualify() {
           <a
             href="/ISICHEI_CHUKWUKA_CV.pdf"
             target="_blank"
-            className="btn btn-primary"
+            className="btn btn-success"
           >
             View CV
           </a>
